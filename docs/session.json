@@ -1,0 +1,509 @@
+{
+	"sessions": {
+		"session_id_1": {
+			"created_at": "2016-08-08T20h10s31",
+			"_setup": {
+				"furnitures": {
+					"table_1": {
+						"furniture_id": "table_1",
+						"starting_tile": "A5"
+					}
+				},
+				"heroes": {
+					"hskfhwqi9235y67tgjd": {
+						"class_id": "barbarian",
+						"starting_tile": "B8",
+						"account": {
+							"account_id": "natandan_at_gmail_dot_com",
+							"name": "Natan Dan",
+							"email": "natandan@gmail.com"
+						}
+					},
+					"nbkdfnu4g853y8g9gh": {
+						"class_id": "mage",
+						"starting_tile": "B7",
+						"account": {
+							"account_id": "john_dot_smit4_at_gmail_dot_com",
+							"name": "John Smith",
+							"email": "john.smit4@gmail.com"
+						}
+					}
+				},
+				"enemies": {
+					"dhgih3784othkelhgj": {
+						"enemy_id": "goblin",
+						"starting_tile": "A2"
+					},
+					"bnkdlsjdu237420978": {
+						"enemy_id": "goblin",
+						"starting_tile": "A3"
+					},
+					"knigy7f545w345w32h": {
+						"enemy_id": "goblin",
+						"starting_tile": "A4"
+					}
+				}
+			},
+			"rounds": {
+				"round_1": {
+					"action_1": {
+						"thing_type": "hero",
+						"thing_name": "Barbarian",
+						"summoned_id": "summoned_hero_id_1",
+						"position": "1,1",
+            "action_type": "move"
+					},
+          "action_2": {
+            "thing_type": "hero",
+            "thing_name": "Barbarian",
+            "summoned_id": "summoned_hero_id_1",
+            "position": "1,1",
+            "action_type": "move"
+          },
+					"action_3": {
+						"thing_type": "enemy",
+						"thing_name": "Goblin",
+						"summoned_id": "enemy_id_1",
+						"position": "2,2"
+					},
+          "action_3": {
+            "thing_type": "enemy",
+            "thing_name": "Goblin",
+            "summoned_id": "enemy_id_1",
+            "position": "2,2"
+          },
+					"action_4": {
+						"thing_type": "furniture",
+						"thing_name": "Treasure Box",
+						"summoned_id": "furniture_id",
+						"position": "1,3"
+					}
+				},
+        "turn_2": {
+					"hero_a7tx7s9ja8": {
+						"thing_type": "hero",
+						"thing_name": "Barbarian",
+						"summoned_id": "summoned_hero_id_1",
+						"position": "1,1"
+					},
+					"enemy_jj69shha82": {
+						"thing_type": "enemy",
+						"thing_name": "Goblin",
+						"summoned_id": "enemy_id_1",
+						"position": "2,2"
+					},
+					"furniture_292835789": {
+						"thing_type": "furniture",
+						"thing_name": "Treasure Box",
+						"summoned_id": "furniture_id",
+						"position": "1,3"
+					}
+				}
+			},
+			"summoned_enemies": {
+				"enemy_id_1": {
+					"setup_id": "dhgih3784othkelhgj",
+					"enemy_id": "goblin",
+					"body_points": 3,
+					"mind_points": 0
+				},
+				"enemy_id_2": {
+					"setup_id": "bnkdlsjdu237420978",
+					"enemy_id": "goblin",
+					"body_points": 1,
+					"mind_points": 0
+				},
+				"enemy_id_3": {
+					"setup_id": "knigy7f545w345w32h",
+					"enemy_id": "goblin",
+					"body_points": 5,
+					"mind_points": 0
+				}
+			},
+			"summoned_heroes": {
+				"hero_id_1": {
+					"setup_id": "hskfhwqi9235y67tgjd",
+					"class_id": "barbarian",
+					"body_points": 3,
+					"mind_points": 0
+				},
+				"hero_id_2": {
+					"setup_id": "nbkdfnu4g853y8g9gh",
+					"class_id": "mage",
+					"body_points": 2,
+					"mind_points": 7
+				}
+			}
+		}
+	},
+	"items": {
+		"gold_id": {
+			"name": "Gold",
+			"description": "A shiny piece of Gold. The more, the better."
+		},
+		"spiritual_blade_id": {
+			"name": "Spiritual Blade",
+			"description": "A strange blade. Dont know how to use."
+		}
+	},
+	"furnitures": {
+		"door": {
+			"name": "Closed Door",
+			"description": "A simple door. Its closed right now.",
+			"states": {
+				"default": {
+					"name": "Door Closed",
+					"walkable": false,
+					"loot": {},
+					"icon": {
+						"file_name": "door_closed.jpg"
+					}
+				},
+				"opened": {
+					"name": "Door Opened",
+					"walkable": true,
+					"loot": {},
+					"icon": {
+						"file_name": "door_opened.jpg"
+					}
+				}
+			}
+		},
+		"treasure_box": {
+			"name": "Treasure Box",
+			"description": "A beatiful sculped box, people use to keep valuable things inside..",
+			"states": {
+				"default": {
+					"name": "Treasure Box Closed",
+					"walkable": false,
+					"loot": {},
+					"icon": {
+						"file_name": "box_closed.jpg"
+					}
+				},
+				"opened": {
+					"name": "Treasure Box Opened",
+					"walkable": false,
+					"loot": {
+						"spiritual_blade_id": {
+							"quantity": 1
+						},
+						"gold": {
+							"quantity": 150
+						}
+					},
+					"icon": {
+						"file_name": "box_opened.jpg"
+					}
+				}
+			}
+		}
+	},
+	"enemies": {
+		"goblin": {
+			"name": "Goblin",
+			"description": "Yaiik yaik, i love humans! I kill them!",
+			"movement": 10,
+			"attack_dices": 2,
+			"defende_dices": 1,
+			"body_points": 1,
+			"mind_points": 1,
+			"starting_weapon": "short_sword",
+			"starting_armor": "",
+			"images": {
+				"avatar": {
+					"file_name": "avatar.jpg"
+				},
+				"sprite": {
+					"file_name": "sprite.jpg"
+				},
+				"illustration": {
+					"file_name": "illustration.jpg"
+				}
+			}
+		},
+		"orc": {
+			"name": "Orc",
+			"description": "Zailik Has Gahul, i hate humans! I eat them!",
+			"movement": 8,
+			"attack_dices": 3,
+			"defende_dices": 2,
+			"body_points": 1,
+			"mind_points": 2,
+			"starting_weapon": "large_sword",
+			"starting_armor": "",
+			"images": {
+				"avatar": {
+					"file_name": "avatar.jpg"
+				},
+				"sprite": {
+					"file_name": "sprite.jpg"
+				},
+				"illustration": {
+					"file_name": "illustration.jpg"
+				}
+			}
+		},
+		"mummy": {
+			"name": "Múmia",
+			"description": "OOoh, ooh!",
+			"movement": 4,
+			"attack_dices": 3,
+			"defende_dices": 4,
+			"body_points": 2,
+			"mind_points": 0,
+			"starting_weapon": "",
+			"starting_armor": "",
+			"images": {
+				"avatar": {
+					"file_name": "avatar.jpg"
+				},
+				"sprite": {
+					"file_name": "sprite.jpg"
+				},
+				"illustration": {
+					"file_name": "illustration.jpg"
+				}
+			}
+		},
+		"skeleton": {
+			"name": "Esqueleto",
+			"description": "Kiahaaaahahahaha!",
+			"movement": 6,
+			"attack_dices": 2,
+			"defende_dices": 2,
+			"body_points": 1,
+			"mind_points": 0,
+			"starting_weapon": "sickle",
+			"starting_armor": "",
+			"images": {
+				"avatar": {
+					"file_name": "avatar.jpg"
+				},
+				"sprite": {
+					"file_name": "sprite.jpg"
+				},
+				"illustration": {
+					"file_name": "illustration.jpg"
+				}
+			}
+		},
+		"zombie": {
+			"name": "Zumbi",
+			"description": "UOoohh!",
+			"movement": 5,
+			"attack_dices": 2,
+			"defende_dices": 3,
+			"body_points": 1,
+			"mind_points": 0,
+			"starting_weapon": "machete",
+			"starting_armor": "",
+			"images": {
+				"avatar": {
+					"file_name": "avatar.jpg"
+				},
+				"sprite": {
+					"file_name": "sprite.jpg"
+				},
+				"illustration": {
+					"file_name": "illustration.jpg"
+				}
+			}
+		},
+		"fimir": {
+			"name": "Fimir",
+			"description": "Die! Die! Piece of meat! Die!",
+			"movement": 6,
+			"attack_dices": 3,
+			"defende_dices": 3,
+			"body_points": 2,
+			"mind_points": 3,
+			"starting_weapon": "large_axe",
+			"starting_armor": "lether_armor",
+			"images": {
+				"avatar": {
+					"file_name": "avatar.jpg"
+				},
+				"sprite": {
+					"file_name": "sprite.jpg"
+				},
+				"illustration": {
+					"file_name": "illustration.jpg"
+				}
+			}
+		},
+		"caos": {
+			"name": "Guerreiro Caos",
+			"description": "...",
+			"movement": 7,
+			"attack_dices": 4,
+			"defende_dices": 4,
+			"body_points": 3,
+			"mind_points": 3,
+			"starting_weapon": "large_axe",
+			"starting_armor": "plate_armor",
+			"images": {
+				"avatar": {
+					"file_name": "avatar.jpg"
+				},
+				"sprite": {
+					"file_name": "sprite.jpg"
+				},
+				"illustration": {
+					"file_name": "illustration.jpg"
+				}
+			}
+		},
+		"gargoyle": {
+			"name": "Gárgola",
+			"description": "You will die, mortal!",
+			"movement": 6,
+			"attack_dices": 4,
+			"defende_dices": 5,
+			"body_points": 3,
+			"mind_points": 4,
+			"starting_weapon": ["large_sword", "whip"],
+			"starting_armor": "bronze_armor",
+			"images": {
+				"avatar": {
+					"file_name": "avatar.jpg"
+				},
+				"sprite": {
+					"file_name": "sprite.jpg"
+				},
+				"illustration": {
+					"file_name": "illustration.jpg"
+				}
+			}
+		}
+	},
+	"classes": {
+		"barbarian": {
+			"name": "Barbarian",
+			"description": "A very Strong Warrior, which loves to jump into the action!",
+			"movement": 2,
+			"attack_dices": 3,
+			"defend_dices": 2,
+			"body_points": 8,
+			"mind_points": 2,
+			"starting_weapon": "large_sword",
+			"starting_armor": "",
+			"images": {
+				"avatar": {
+					"file_name": "avatar.jpg"
+				},
+				"sprite": {
+					"file_name": "sprite.jpg"
+				},
+				"illustration": {
+					"file_name": "illustration.jpg"
+				}
+			}
+		},
+		"dwarf": {
+			"name": "Dwarf",
+			"description": "A smart and brave warrior, short in size big in action!",
+			"movement": 2,
+			"attack_dices": 2,
+			"defend_dices": 2,
+			"body_points": 7,
+			"mind_points": 3,
+			"starting_weapon": "short_sword",
+			"starting_armor": "",
+			"images": {
+				"avatar": {
+					"file_name": "avatar.jpg"
+				},
+				"sprite": {
+					"file_name": "sprite.jpg"
+				},
+				"illustration": {
+					"file_name": "illustration.jpg"
+				}
+			}
+		},
+		"elf": {
+			"name": "Elf",
+			"description": "The power of nature and agility!",
+			"movement": 2,
+			"attack_dices": 2,
+			"defend_dices": 2,
+			"body_points": 6,
+			"mind_points": 4,
+			"starting_weapon": "short_sword",
+			"starting_armor": "",
+			"images": {
+				"avatar": {
+					"file_name": "avatar.jpg"
+				},
+				"sprite": {
+					"file_name": "sprite.jpg"
+				},
+				"illustration": {
+					"file_name": "illustration.jpg"
+				}
+			}
+		},
+		"wizzard": {
+			"name": "Wizzard",
+			"description": "Controls the magic!",
+			"movement": 2,
+			"attack_dices": 1,
+			"defend_dices": 2,
+			"body_points": 4,
+			"mind_points": 6,
+			"starting_weapon": "dagger",
+			"starting_armor": "",
+			"images": {
+				"avatar": {
+					"file_name": "avatar.jpg"
+				},
+				"sprite": {
+					"file_name": "sprite.jpg"
+				},
+				"illustration": {
+					"file_name": "illustration.jpg"
+				}
+			}
+		}
+	},
+	"dice_rolls": {
+		"f82g9g32u6dsh": {
+			"session_id": "89gf82g782332g",
+			"account_id": "bvouiw89g3937",
+			"intent": "attacked a monster",
+			"success": true,
+			"rolls": {
+				"2389fg0780sgk": {
+					"rolled": 3
+				},
+				"f78f79r678r678": {
+					"rolled": 4
+				},
+				"g789679fh20h3": {
+					"rolled": 1
+				}
+			}
+		}
+	},
+	"accounts": {
+		"renatodex_at_gmail_dot_com": {
+			"created_at": "2016-08-08T20h10s31",
+			"name": "Renato Alves",
+			"email": "renatodex@gmail.com",
+			"password": "abc123"
+		},
+		"natandan_at_gmail_dot_com": {
+			"created_at": "2016-08-08T20h10s31",
+			"name": "Natan Dan",
+			"email": "natandan@gmail.com",
+			"password": "mkbar9966"
+		},
+		"john_dot_smit4_at_gmail_dot_com": {
+			"created_at": "2016-08-08T20h10s31",
+			"name": "John Smith",
+			"email": "john.smit4@gmail.com",
+			"password": "jnsm11249778"
+		}
+	}
+}

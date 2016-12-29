@@ -34,10 +34,9 @@ module.exports.routes = {
 
   '/': {
     view: 'homepage'
-  }
-  // 'POST /': {
-  //   view: 'homepage'
-  // }
+  },
+
+  'GET /sessions/get': 'SessionsController.get'
 
   /***************************************************************************
   *                                                                          *

@@ -21,4 +21,5 @@ module.exports = {
   //   connection: 'someMongodbServer'
   // }
 
+  max_actions_per_actor: 2
 };

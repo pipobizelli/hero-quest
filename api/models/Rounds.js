@@ -7,5 +7,10 @@
 
 module.exports = {
   attributes: {
+    has_available_actions: function() {
+      Actions.find({ round_id: this.id }).then(function(actions) {
+        
+      })
+    }
   }
 };

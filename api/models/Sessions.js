@@ -7,7 +7,16 @@
 
 module.exports = {
   attributes: {
+    has_rounds: function() {
+      return Rounds.find({session_id: this.id});
+    },
 
+    total_actions: function() {
+      return Actors.find({session_id: this.id}).then(function(actors) {
+        return actors.length * sails.config.max_actions_per_actor;
+        done();
+      });
+    }
   },
-  schema: false
+  schema: false,
 };
